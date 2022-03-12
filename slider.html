@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resposive WEBSITE</title>
+    <link rel="stylesheet" href="pa.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+</head>
+
+<body>
+    <header>
+        <a href="#" class="brand"></i>travel<i class="fas fa-globe"></i>world</a>
+        <div class="menu-btn">
+
+        </div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="#home">home</a>
+                <a href="#about">about</a>
+                <a href="#booking">booking</a>
+                <a href="#contact">contact</a>
+            </div>
+        </div>
+    </header>
+    <section class="home">
+        <video class="video-slide" src="1297186308.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="1628446074.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="1662319669.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="1894712401.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="1186880190.mp4" autoplay muted loop></video>
+        <div class="content">
+            <h1>beautiful<br><span>world</span></h1>
+            <p>Nature is made of everything we see around us trees, flowers, plants, animals, sky, mountains, forests and more. Human beings depend on nature to stay alive. Nature helps us breathe, gives us food, water, shelter, medicines, and clothes. We
+                find many colors in nature which make the Earth beautiful.</p>
+            <a href="r.html">READ More</a>
+        </div>
+        <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="slider-navigation">
+            <div class="nav-btn "> </div>
+            <div class="nav-btn"> </div>
+            <div class="nav-btn"> </div>
+            <div class="nav-btn"> </div>
+            <div class="nav-btn"> </div>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="heading">
+            <span>lets decuss about a nuture</span>
+            <h1>about the nature</h1>
+        </div>
+    </section>
+    <script type="text/javascript">
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        });
+
+        //javascript for vedio slider .
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+        var sliderNav = function(manual) {
+            btns.forEach((btn) => {
+                btn.classList.remove("active");
+
+            });
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+
+            });
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                sliderNav(i);
+            });
+        });
+    </script>
+</body>
+
+</html>
